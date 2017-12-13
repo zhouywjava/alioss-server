@@ -16,6 +16,7 @@
         <slf.version>1.7.25</slf.version>
         <httpclient.version>4.5.2</httpclient.version>
         <fastJson.version>1.2.42</fastJson.version>
+        <tomcat.version>2.2</tomcat.version>
     </properties>
     <!-- https://mvnrepository.com/artifact/org.springframework/spring-webmvc -->
     <dependencies>
@@ -63,6 +64,19 @@
         </dependency>
 
     </dependencies>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.tomcat.maven</groupId>
+                <artifactId>tomcat7-maven-plugin</artifactId>
+                <version>${tomcat.version}</version>
+                <configuration>
+                    <url>http://localhost:8080/alioss/index</url>
+                    <server>tomcat</server>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 
 
 

@@ -23,7 +23,7 @@ public class HomeControllerTest {
     @Test
     public void indexTest() throws IOException {
         CloseableHttpClient httpClient = HttpClients.createDefault();
-        HttpGet httpGet = new HttpGet("http://localhost:8080/alioss/index");
+        HttpGet httpGet = new HttpGet("http://localhost:9090/alioss/index");
         JSONObject jsonObject = new JSONObject();
         StringEntity stringEntity = new StringEntity(URLEncoder.encode(jsonObject.toJSONString(),"UTF-8"));
         CloseableHttpResponse response = httpClient.execute(httpGet);
