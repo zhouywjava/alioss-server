@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="alioss:war">
+    <output-path>$PROJECT_DIR$/../alioss/target</output-path>
+    <root id="archive" name="alioss-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="alioss:war exploded" />
+    </root>
+  </artifact>
+</component>
