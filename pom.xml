@@ -17,6 +17,7 @@
         <httpclient.version>4.5.2</httpclient.version>
         <fastJson.version>1.2.42</fastJson.version>
         <tomcat.version>2.2</tomcat.version>
+        <freemark.version>2.3.23</freemark.version>
     </properties>
     <!-- https://mvnrepository.com/artifact/org.springframework/spring-webmvc -->
     <dependencies>
@@ -61,6 +62,18 @@
             <groupId>com.alibaba</groupId>
             <artifactId>fastjson</artifactId>
             <version>${fastJson.version}</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.freemarker/freemarker -->
+        <dependency>
+            <groupId>org.freemarker</groupId>
+            <artifactId>freemarker</artifactId>
+            <version>${freemark.version}</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.springframework/spring-context-support -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context-support</artifactId>
+            <version>${spring.version}</version>
         </dependency>
 
     </dependencies>
