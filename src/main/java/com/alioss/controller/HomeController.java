@@ -1,8 +1,10 @@
 package com.alioss.controller;
 
+import com.alioss.model.Person;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 /**
  * @Description:
@@ -19,9 +21,13 @@ public class HomeController {
         return "index";
     }
 
+    @ResponseBody
     @GetMapping("/hello")
-    public String hello(){
-        System.out.println("Helloworld");
-        return "hello";
+    public Person hello(){
+        Person person = new Person();
+        person.setId("1");
+        person.setName("你好");
+        person.setSex("1");
+        return person;
     }
 }
