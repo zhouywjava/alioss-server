@@ -3,7 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/alioss.iml" filepath="$PROJECT_DIR$/alioss.iml" />
-      <module fileurl="file://F:/alioss-vue/alioss-vue.iml" filepath="F:/alioss-vue/alioss-vue.iml" />
     </modules>
   </component>
 </project>
