@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.demo</groupId>
-    <artifactId>alioss</artifactId>
+    <artifactId>alioss-server</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>war</packaging>
     <properties>
@@ -84,7 +84,7 @@
                 <artifactId>tomcat7-maven-plugin</artifactId>
                 <version>${tomcat.version}</version>
                 <configuration>
-                    <url>http://localhost:8080/alioss/index</url>
+                    <url>http://localhost:9090/alioss/home/index</url>
                     <server>tomcat</server>
                 </configuration>
             </plugin>
