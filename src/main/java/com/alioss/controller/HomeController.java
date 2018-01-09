@@ -1,11 +1,11 @@
 package com.alioss.controller;
 
+import com.alioss.common.base.BaseController;
+import com.alioss.common.result.Result;
+import com.alioss.common.result.Results;
 import com.alioss.model.Person;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * @Description:
@@ -13,8 +13,9 @@ import org.springframework.web.bind.annotation.ResponseBody;
  * @Date: 2017/12/13
  */
 @Controller
+@CrossOrigin(origins = "http://localhost:8080",maxAge = 3600)
 @RequestMapping("/home")
-public class HomeController {
+public class HomeController extends BaseController{
 
     @GetMapping("/index")
     public String index(){
@@ -23,7 +24,6 @@ public class HomeController {
     }
 
     @ResponseBody
-    @CrossOrigin(origins = "http://localhost:8080")
     @GetMapping("/hello")
     public Person hello(){
         Person person = new Person();
@@ -31,5 +31,11 @@ public class HomeController {
         person.setName("你好");
         person.setSex("1");
         return person;
+    }
+
+    @ResponseBody
+    @PostMapping("/login")
+    public Result<String> login(){
+        return Results.success("登录成功");
     }
 }
