@@ -38,4 +38,10 @@ public class HomeController extends BaseController{
     public Result<String> login(){
         return Results.success("登录成功");
     }
+
+    @ResponseBody
+    @PostMapping("/regist")
+    public Result<String> regist(){
+        return Results.success("注册成功");
+    }
 }
